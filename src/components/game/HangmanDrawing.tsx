@@ -46,8 +46,8 @@ export function HangmanDrawing({ wrongGuesses, maxWrongGuesses }: HangmanDrawing
   const visibleParts = parts.slice(0, Math.min(4 + wrongGuesses, parts.length));
 
   return (
-    <div className="flex justify-center items-center bg-gray-50 rounded-lg border p-4">
-      <svg width="300" height="350" viewBox="0 0 300 350">
+    <div className="flex justify-center items-center bg-gray-50 rounded-lg border p-2">
+      <svg width="200" height="240" viewBox="0 0 200 240">
         {visibleParts}
         {face}
       </svg>

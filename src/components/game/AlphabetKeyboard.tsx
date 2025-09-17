@@ -30,7 +30,7 @@ export function AlphabetKeyboard({
   };
 
   return (
-    <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-9 gap-2 max-w-2xl mx-auto">
+    <div className="grid grid-cols-6 gap-1 max-w-xs mx-auto">
       {alphabet.map((letter) => {
         const state = getLetterState(letter);
         const isGuessed = guessedLetters.has(letter);
@@ -47,7 +47,7 @@ export function AlphabetKeyboard({
             }
             size="sm"
             className={cn(
-              'h-12 text-lg font-bold transition-all duration-200',
+              'h-8 text-xs font-bold transition-all duration-200 p-1',
               {
                 'bg-green-500 hover:bg-green-600 text-white': state === 'correct',
                 'bg-red-500 hover:bg-red-600 text-white': state === 'incorrect',

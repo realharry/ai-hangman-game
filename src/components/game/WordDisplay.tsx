@@ -17,11 +17,11 @@ export function WordDisplay({ word, guessedLetters, showWord = false }: WordDisp
 
   return (
     <div className="text-center">
-      <div className="text-4xl font-mono font-bold tracking-widest text-slate-800 mb-4">
+      <div className="text-xl font-mono font-bold tracking-wide text-slate-800 mb-2 break-all">
         {displayWord}
       </div>
       {showWord && (
-        <div className="text-sm text-slate-600">
+        <div className="text-xs text-slate-600">
           Complete word: {word}
         </div>
       )}

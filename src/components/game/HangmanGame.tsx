@@ -118,11 +118,11 @@ export function HangmanGame() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
-      <div className="max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
+      <div className="max-w-sm mx-auto space-y-4">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-slate-800 mb-2">
+          <h1 className="text-2xl font-bold text-slate-800 mb-2">
             {t.title}
           </h1>
           <GameStats 
@@ -150,7 +150,7 @@ export function HangmanGame() {
 
         {/* Main Game Area */}
         {gameState.status !== 'idle' && (
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="space-y-4">
             {/* Hangman Drawing */}
             <div className="flex justify-center">
               <HangmanDrawing
@@ -160,7 +160,7 @@ export function HangmanGame() {
             </div>
 
             {/* Word and Controls */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               <WordDisplay
                 word={gameState.word}
                 guessedLetters={gameState.guessedLetters}
@@ -168,7 +168,7 @@ export function HangmanGame() {
               />
 
               <div className="text-center">
-                <p className="text-lg text-slate-700 mb-2">
+                <p className="text-sm text-slate-700 mb-2">
                   {t.wrongGuesses}: {gameState.wrongGuesses} / {gameState.maxWrongGuesses}
                 </p>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -192,8 +192,8 @@ export function HangmanGame() {
               )}
 
               {gameState.playerType === 'ai' && gameState.status === 'playing' && (
-                <div className="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
-                  <p className="text-purple-800 font-medium">
+                <div className="text-center p-3 bg-purple-50 rounded-lg border border-purple-200">
+                  <p className="text-purple-800 font-medium text-sm">
                     AI is thinking... 🤖
                   </p>
                 </div>

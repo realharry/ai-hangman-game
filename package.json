@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:extension": "npm run build && cp public/manifest.json dist/",
+    "build:extension": "npm run build && cp public/manifest.json dist/ && cp public/background.js dist/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
