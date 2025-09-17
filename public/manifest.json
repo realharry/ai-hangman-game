@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "AI Hangman Game",
+  "version": "1.0.0",
+  "description": "A multilingual hangman game with AI player support built with Pixi.js",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "AI Hangman Game"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
